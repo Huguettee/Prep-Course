@@ -1,0 +1,24 @@
+var Animal = {
+    hablar() {
+      console.log(this.nombre + ' hace ruido.');
+    },
+    comer() {
+      console.log(this.nombre + ' se alimenta.');
+    }
+  };
+  
+  class Perro {
+    constructor(nombre) {
+      this.nombre = nombre;
+    }
+    hablar() {
+      console.log(this.nombre + ' ladra.');
+    }
+  }
+  
+  Object.setPrototypeOf(Perro.prototype, Animal);
+  
+  var d = new Perro('Mitzie');
+  d.hablar();
+  
+  
