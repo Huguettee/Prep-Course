@@ -178,14 +178,27 @@ function mesesDelAño(array) {
   // "Enero", "Marzo" y "Noviembre", guardarlo en nuevo array y retornarlo.
   //Si alguno de los meses no está, devolver: "No se encontraron los meses pedidos"
   // Tu código:
-}
+  var nuevoarray = []
+  for (var i = 0; i < array.length; i++) {
+    if (array [i] === "Enero" || array [i] === "Marzo" || array [i] === "Noviembre") {
+        nuevoarray.push(array[i]); 
+        } }
+  if (nuevoarray.length < 3) {
+      return "No se encontraron los meses pedidos"
+  } else return nuevoarray
+  }
 
 
 function mayorACien(array) {
   //La función recibe un array con enteros entre 0 y 200. Recorrer el array y guardar en un nuevo array sólo los
   //valores mayores a 100 (no incluye el 100). Finalmente devolver el nuevo array.
   // Tu código:
-}
+  var ahia = [];
+  for (var i = 0; i < array.length; i++) {
+    if (array[i] > 100) {
+    ahia.push(array[i]);
+    } 
+}return ahia;}
 
 
 function breakStatement(numero) {
@@ -196,6 +209,21 @@ function breakStatement(numero) {
   //devolver: "Se interrumpió la ejecución"
   //Pista: usá el statement 'break'
   // Tu código:
+  var array = [];
+  
+  for(var i= 0; i<10; i++) {
+    numero = numero + 2;
+    if(numero === i) break;
+    else {
+      array.push(numero);
+    }
+  }
+  if(i < 10) {
+    return 'Se interrumpió la ejecución';
+  }
+  else {
+      return array;
+  }
 }
 
 
@@ -206,7 +234,17 @@ function continueStatement(numero) {
   //Cuando el número de iteraciones alcance el valor 5, no se suma en ese caso y se continua con la siguiente iteración
   //Pista: usá el statement 'continue'
   // Tu código:
+  //nuevoarray
+  var array = [];
+  for(var i= 0; i<10; i++) {
+    if(i === 5) continue;
+    else {
+      numero = numero + 2;
+          array.push(numero);
+  } }
+  return array;
 }
+
 
 
 // No modificar nada debajo de esta línea
